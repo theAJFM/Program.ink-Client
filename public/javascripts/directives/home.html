@@ -1,0 +1,29 @@
+<h2>Gallery</h2>
+<div class="container-gallery__grid">
+	<ul>
+		<li ng-repeat="item in list">
+			<div class="items">
+				<a href="{{ item.link }}">
+				<img ng-src="{{ item.image }}">
+				<div class="overlay">
+					<span><h2>Click to Preview</h2></span>
+				</div>
+				</a>
+			</div>
+			<div class="meta-byline">
+				<span class="title">
+					{{ item.title }}
+				</span>
+				<span class="author">
+					by 
+					{{ item.author }}
+				</span>
+				<i class="fa fa-thumbs-up">
+					<span class="number">{{ item.upvote }}
+					</span></i>
+				<i class="fa fa-thumbs-down"><span class="number">{{ item.downvote }}</span></i>
+				<i class="fa fa-comment"><span class="number">{{ item.comments }}</span></i>
+			</div>
+		</li>
+	</ul>
+</div>

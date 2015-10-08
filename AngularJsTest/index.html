@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<link href="css/sass-test/stylesheets/app.css" rel="stylesheet" />
+		<link href="css/sass-test/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+  		<script src="js/angular.min.js"></script>
+  		<script src="js/jquery-2.1.4.min.js"></script>
+
+	</head>
+	<body ng-app="ProgramInk">
+		<nav class="navbar-left">
+			<ul>
+				<li class="menu-home">
+						<a href="#">
+							<i class="fa fa-home"></i>
+						</a>
+						<span id="menu-home" class="menu-info">Home</span>
+				</li>
+				<li class="menu-job">
+						<a href="#">
+							<i class="fa fa-briefcase"></i>
+						</a>
+						<span id="menu-job" class="menu-info">Job</span>
+				</li>
+				<li class="menu-category">
+					<a href="#">
+						<i class="fa fa-list"></i>
+					</a>
+					<span id="menu-category"class="menu-info">Category</span>
+					
+				</li>
+				<li class="menu-forum">
+					<a href="#">
+						<i class="fa fa-comment"></i>
+					</a>
+					<span id="menu-forum" class="menu-info">Forum</span>
+				</li>
+				<li class="menu-settings">
+					<a href="#">
+						<i class="fa fa-wrench"></i>
+					</a>
+					<span id="menu-settings" class="menu-info">Settings</span>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="container__center" ng-controller="CategoryController">
+			<h2>Program.ink</h2>
+			<div class="container-gallery__grid" >
+				<ul>
+					<li ng-repeat="item in list">
+						<category category="item"></category>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+
+
+
+		<!-- Modules -->
+		<script src="js/app.js"></script>
+
+		<!-- Controllers -->
+		<script src="js/controllers/CategoryController.js"></script>
+
+		<!-- Directives -->
+		<script src="js/directives/category.js"></script>
+
+		<script src="js/nav.js"></script>
+	</body>
+</html>
