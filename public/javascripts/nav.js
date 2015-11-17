@@ -54,4 +54,18 @@ $(document).ready(function(){
 		$('a.is-selected').removeClass('is-selected');
 		$('.menu-settings a').addClass('is-selected');
 	});
+
+	$('#signup_tab').on('click', function() {
+		$('li.is-selected').removeClass('is-selected');
+		$(this).addClass('is-selected');
+	});
+
+	$('#login_tab').on('click', function() {
+		$('li.is-selected').removeClass('is-selected');
+		$(this).addClass('is-selected');
+	});
+
+	$(function() {
+		$('.join_box').tabs();
+	});
 });

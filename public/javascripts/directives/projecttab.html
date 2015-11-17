@@ -1,0 +1,14 @@
+
+<h2>{{ header }}</h2>
+<div class="tab-first__content">
+	<ul>
+		<li ng-repeat="item in list">
+			<div class="project">
+				<img ng-src="{{ item.img }}">
+			<div class="project-overlay">
+				<span><h2>{{ item.h2 }}</h2></span>
+			</div>
+			</div>
+		</li>
+	</ul>
+</div>
