@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<link href="styles/app.css" rel="stylesheet" />
+		<link href="stylesheets/sass-test/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
+
+  		<script src="javascripts/angular.min.js"></script>
+  		<script src="javascripts/jquery-2.1.4.min.js"></script>
+
+	</head>
+	<body ng-app="ProgramInk">
+			<nav class="navbar-left">
+			<ul>
+				<li class="menu-home">
+					<a href="#home">
+						<i class="fa fa-home"></i>
+					</a>
+					<span id="menu-home" class="menu-info">Home</span>
+				</li>
+				<li class="menu-job">
+					<a href="#job">
+						<i class="fa fa-briefcase"></i>
+					</a>
+					<span id="menu-job" class="menu-info">Job</span>
+				</li>
+				<li class="menu-category">
+					<a href="#category">
+						<i class="fa fa-list"></i>
+					</a>
+					<span id="menu-category"class="menu-info">Category</span>
+					
+				</li>
+				<li class="menu-forum">
+					<a href="#forum">
+						<i class="fa fa-comment"></i>
+					</a>
+					<span id="menu-forum" class="menu-info">Forum</span>
+				</li>
+				<li class="menu-settings">
+					<a href="#settings">
+						<i class="fa fa-wrench"></i>
+					</a>
+					<span id="menu-settings" class="menu-info">Settings</span>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="container__center">
+			<div class="header">
+				
+			</div>
+			<div class="page {{ pageClass }}" ng-view></div>
+		</div>
+
+
+
+
+
+		<!-- Modules -->
+		<script src="javascripts/app.js"></script>
+		<script src="javascripts/angular-route.min.js">
+		</script>
+		<script src="javascripts/angular-animate.min.js">
+		</script>
+
+		<!-- Controllers -->
+		<script src="javascripts/controllers/NavbarController.js"></script>
+		<script src="javascripts/controllers/CategoryController.js">
+		</script>
+		<script src="javascripts/controllers/HomeController.js">
+		</script>
+
+		<!-- Directives -->
+
+		<script src="javascripts/nav.js"></script>
+	</body>
+</html>

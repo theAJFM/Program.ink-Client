@@ -4,29 +4,151 @@
 		<link href="stylesheets/sass-test/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
   		<script src="javascripts/angular.min.js"></script>
   		<script src="javascripts/jquery-2.1.4.min.js"></script>
 
 	</head>
 	<body ng-app="ProgramInk">
-		<div ng-controller="NavbarController">
-			<div ng-include src="'javascripts/directives/nav.html'" ng-hide="welcomePath()"></div>
-		</div>
-
-		<div class="container__center">
-			<div class="header">
-				
+		<nav class="navbar-top">
+			<div class="navbar-menu">
+			<div class="brand-logo">
+				<a href="index.html">P R O G R A M I N K</a>
 			</div>
-			<div class="page {{ pageClass }}" ng-view></div>
+			<ul class="nav-list">
+				<li>
+					<a href ="#">
+						Freelance
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Work
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Community
+					</a>
+				</li>
+			</ul>
+			</div>
+		</nav>
+		
+		<div class="container__welcome">
+			<div class="container__welcome-overlay">
+				<div class="details-container">
+				<div class="center-container">
+					<h1>Come Join Us on ProgramInk</h1>
+					<h2>Where opportunities come from around the globe . Submit your work and applications to amaze the world ! asasdasd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd s</h2>
+					<a href="join.html" type="button" class="login-btn">Login</a>
+					<a href="join.html" type="button" class="sgnup-btn">Sign Up</a>
+			</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="container__middle-content">
+			<h1>We Provide Everything</h1>
+			<p>We help developer and freelance to communicate each other through the web portal to accomplish goals.</p>
+			<div class="tab-selector">
+						<a ui-sref="projecttab" ui-sref-active="is-selected" class="tab-btn">
+							Project
+						</a>
+						<a ui-sref="languagestab" ui-sref-active="is-selected" class="tab-btn middle">
+							Languages
+						</a>
+						<a ui-sref="jobtab" ui-sref-active="is-selected" class="tab-btn">
+							Job
+						</a>
+			</div>
+			<div ui-view></div>
+		</div>
+
+		<div class="container__team-members">
+			<div class="team-box">
+				<ul>
+					<li>
+						<div class="member">
+							<div class="member-profile">
+								<img src="http://placehold.it/100x100">
+							</div>
+							<h2>Zunio</h2>
+							<p>Front End Ninja</p>
+						</div>
+					</li>
+					<li>
+						<div class="member">
+
+							<div class="member-profile">
+								<img src="http://placehold.it/100x100">
+							</div>
+							<h2>Zunio</h2>
+							<p>Front End Ninja</p>
+						</div>
+					</li>
+					<li>
+						<div class="member">
+							<div class="member-profile">
+								<img src="http://placehold.it/100x100">
+							</div>
+							<h2>Zunio</h2>
+							<p>Front End Ninja</p>
+						</div>
+					</li>
+					<li>
+						<div class="member">
+							<div class="member-profile">
+								<img src="http://placehold.it/100x100">
+							</div>
+							<h2>Zunio</h2>
+							<p>Front End Ninja</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 
 
+		<footer>
+			<h1>P R O G R A M I N K</h1>
+			<p>&#169 2015 programink, Inc.</p>
+			<div class="footer-menu">
+				<a href="#">About Us</a>
+				&#8226
+				<a href="#">Contact</a>
+				&#8226
+				<a href="#">Blog</a>
+				&#8226
+				<a href="#">FAQ</a>
+				&#8226
+				<a href="#">Careers</a>
+			</div>
+			<ul>
+				<li>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-github-square"></i></a>
+				</li>
+			</ul>
+		</footer>
 
 
 		<!-- Modules -->
 		<script src="javascripts/app.js"></script>
+		<script src="javascripts/angular-ui-router.min.js"></script>
 		<script src="javascripts/angular-route.min.js">
 		</script>
 		<script src="javascripts/angular-animate.min.js">
@@ -38,11 +160,13 @@
 		</script>
 		<script src="javascripts/controllers/HomeController.js">
 		</script>
+		<script src="javascripts/controllers/ProjectTabController.js"></script>
+		<script src="javascripts/controllers/LanguagesTabController.js"></script>
 
 		<!-- Directives -->
-		<script src="javascripts/directives/category.js">
-		</script>
 
+		<!-- Additional Scripts -->
 		<script src="javascripts/nav.js"></script>
+		<script src="javascripts/tab-selector.js"></script>
 	</body>
 </html>

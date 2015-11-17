@@ -1,24 +1,23 @@
-var app = angular.module('ProgramInk', ['ngRoute', 'ngAnimate']);
+var app = angular.module('ProgramInk', ['ngRoute', 'ngAnimate', 'ui.router']);
 
-    app.config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider) {
-        $routeProvider
-            .when('/welcome', {
-                templateUrl: '/javascripts/directives/welcome.html',
-                controller: 'HomeController',
-                title: 'Welcome'
+    app.config(function($stateProvider, $urlRouterProvider) {
+
+        // $urlRouterProvider.otherwise('/index');
+
+        $stateProvider
+
+            .state('projecttab', {
+                url: '/projecttab',
+                templateUrl: 'javascripts/directives/projecttab.html',
+                controller: 'ProjectTabController'
             })
-            .when('/home', {
-                templateUrl: '/javascripts/directives/home.html',
-                controller: 'HomeController',
-                title: 'ProgramInk'
+
+            .state('languagestab', {
+                url: '/languagestab',
+                templateUrl: 'javascripts/directives/languagestab.html',
+                controller: 'LanguagesTabController'
             })
-            .when('/category', {
-                templateUrl: '/javascripts/directives/category.html',
-                controller: 'CategoryController',
-                title: 'Category'
-            })
-            .otherwise({
-                redirectTo: '/welcome'
-            });
-    }]);
+
+
+    });
 
